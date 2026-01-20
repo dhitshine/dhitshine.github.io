@@ -1,0 +1,370 @@
+/* Everblush theme for Pygments/Rouge - Based on everblush.vim */
+/* https://github.com/Everblush/everblush.vim */
+
+/* === Color Palette ===
+ * Background:   #141b1e
+ * Foreground:   #dadada
+ * Comment:      #424c50 (italic)
+ * Red:          #e57474 (errors, preprocessor)
+ * Bright Red:   #ef7e7e (numbers in original everblush)
+ * Green:        #8ccf7e (strings)
+ * Yellow:       #e5c76b (types, classes)
+ * Blue:         #67b0e8 (functions, operators)
+ * Purple:       #c47fd5 (keywords)
+ * Cyan:         #6cbfbf (constants, symbols)
+ * Grey:         #b3b9b8 (punctuation, delimiters)
+ */
+
+.highlight pre {
+    background-color: #141b1e;
+    color: #dadada;
+}
+
+.highlight .hll {
+    background-color: #232a2d;
+}
+
+/* Comment - grey italic */
+.highlight .c {
+    color: #424c50;
+    font-style: italic;
+}
+
+/* Error - red */
+.highlight .err {
+    color: #e57474;
+}
+
+/* Generic - default */
+.highlight .g {
+    color: #dadada;
+}
+
+/* Keyword (const, for, return, class, new) - purple */
+.highlight .k {
+    color: #c47fd5;
+}
+
+/* Literal - green */
+.highlight .l {
+    color: #8ccf7e;
+}
+
+/* Name - default text */
+.highlight .n {
+    color: #dadada;
+}
+
+/* Operator (+, -, *, /, =, <<) - blue */
+.highlight .o {
+    color: #67b0e8;
+}
+
+/* Other */
+.highlight .x {
+    color: #dadada;
+}
+
+/* Punctuation/Delimiter - grey */
+.highlight .p {
+    color: #b3b9b8;
+}
+
+/* Comment.Multiline */
+.highlight .cm {
+    color: #424c50;
+    font-style: italic;
+}
+
+/* Comment.Preproc (#include, #define) - red */
+.highlight .cp {
+    color: #e57474;
+}
+
+/* Comment.Single */
+.highlight .c1 {
+    color: #424c50;
+    font-style: italic;
+}
+
+/* Comment.Special - purple */
+.highlight .cs {
+    color: #c47fd5;
+}
+
+/* Generic.Deleted - red */
+.highlight .gd {
+    color: #e57474;
+}
+
+/* Generic.Emph */
+.highlight .ge {
+    font-style: italic;
+}
+
+/* Generic.Error - red */
+.highlight .gr {
+    color: #e57474;
+}
+
+/* Generic.Heading - blue bold */
+.highlight .gh {
+    color: #67b0e8;
+    font-weight: bold;
+}
+
+/* Generic.Inserted - green */
+.highlight .gi {
+    color: #8ccf7e;
+}
+
+/* Generic.Output */
+.highlight .go {
+    color: #dadada;
+}
+
+/* Generic.Prompt */
+.highlight .gp {
+    color: #6cbfbf;
+}
+
+/* Generic.Strong */
+.highlight .gs {
+    font-weight: bold;
+}
+
+/* Generic.Subheading - blue bold */
+.highlight .gu {
+    color: #67b0e8;
+    font-weight: bold;
+}
+
+/* Generic.Traceback - red */
+.highlight .gt {
+    color: #e57474;
+}
+
+/* Keyword.Constant (true, false, nil) - purple */
+.highlight .kc {
+    color: #c47fd5;
+}
+
+/* Keyword.Declaration (const, let, var) - purple */
+.highlight .kd {
+    color: #c47fd5;
+}
+
+/* Keyword.Namespace (import, using) - purple */
+.highlight .kn {
+    color: #c47fd5;
+}
+
+/* Keyword.Pseudo - purple */
+.highlight .kp {
+    color: #c47fd5;
+}
+
+/* Keyword.Reserved - purple */
+.highlight .kr {
+    color: #c47fd5;
+}
+
+/* Keyword.Type (int, double, void, size_t) - yellow */
+.highlight .kt {
+    color: #e5c76b;
+}
+
+/* Literal.Date - green */
+.highlight .ld {
+    color: #8ccf7e;
+}
+
+/* Literal.Number - bright red/coral (matches original everblush) */
+.highlight .m {
+    color: #ef7e7e;
+}
+
+/* Literal.String - green */
+.highlight .s {
+    color: #8ccf7e;
+}
+
+/* Name.Attribute - red */
+.highlight .na {
+    color: #e57474;
+}
+
+/* Name.Builtin - cyan */
+.highlight .nb {
+    color: #67cbe7;
+}
+
+/* Name.Class - yellow */
+.highlight .nc {
+    color: #e5c76b;
+}
+
+/* Name.Constant - cyan */
+.highlight .no {
+    color: #6cbfbf;
+}
+
+/* Name.Decorator - purple */
+.highlight .nd {
+    color: #c47fd5;
+}
+
+/* Name.Entity */
+.highlight .ni {
+    color: #dadada;
+}
+
+/* Name.Exception - red */
+.highlight .ne {
+    color: #e57474;
+}
+
+/* Name.Function - blue */
+.highlight .nf {
+    color: #67b0e8;
+}
+
+/* Name.Label */
+.highlight .nl {
+    color: #dadada;
+}
+
+/* Name.Namespace */
+.highlight .nn {
+    color: #dadada;
+}
+
+/* Name.Other */
+.highlight .nx {
+    color: #dadada;
+}
+
+/* Name.Property - bright yellow */
+.highlight .py {
+    color: #f4d67a;
+}
+
+/* Name.Tag - red */
+.highlight .nt {
+    color: #e57474;
+}
+
+/* Name.Variable - bright yellow */
+.highlight .nv {
+    color: #f4d67a;
+}
+
+/* Operator.Word - blue */
+.highlight .ow {
+    color: #67b0e8;
+}
+
+/* Text.Whitespace */
+.highlight .w {
+    color: #dadada;
+}
+
+/* Literal.Number.Float - bright red/coral */
+.highlight .mf {
+    color: #ef7e7e;
+}
+
+/* Literal.Number.Hex - bright red/coral */
+.highlight .mh {
+    color: #ef7e7e;
+}
+
+/* Literal.Number.Integer - bright red/coral */
+.highlight .mi {
+    color: #ef7e7e;
+}
+
+/* Literal.Number.Oct - bright red/coral */
+.highlight .mo {
+    color: #ef7e7e;
+}
+
+/* Literal.String.Backtick - green */
+.highlight .sb {
+    color: #8ccf7e;
+}
+
+/* Literal.String.Char - green */
+.highlight .sc {
+    color: #8ccf7e;
+}
+
+/* Literal.String.Doc - comment color */
+.highlight .sd {
+    color: #424c50;
+}
+
+/* Literal.String.Double - green */
+.highlight .s2 {
+    color: #8ccf7e;
+}
+
+/* Literal.String.Escape - blue */
+.highlight .se {
+    color: #67b0e8;
+}
+
+/* Literal.String.Heredoc - green */
+.highlight .sh {
+    color: #8ccf7e;
+}
+
+/* Literal.String.Interpol - green */
+.highlight .si {
+    color: #8ccf7e;
+}
+
+/* Literal.String.Other - green */
+.highlight .sx {
+    color: #8ccf7e;
+}
+
+/* Literal.String.Regex - green */
+.highlight .sr {
+    color: #8ccf7e;
+}
+
+/* Literal.String.Single - green */
+.highlight .s1 {
+    color: #8ccf7e;
+}
+
+/* Literal.String.Symbol - cyan */
+.highlight .ss {
+    color: #6cbfbf;
+}
+
+/* Name.Builtin.Pseudo - cyan */
+.highlight .bp {
+    color: #67cbe7;
+}
+
+/* Name.Variable.Class - bright yellow */
+.highlight .vc {
+    color: #f4d67a;
+}
+
+/* Name.Variable.Global - bright yellow */
+.highlight .vg {
+    color: #f4d67a;
+}
+
+/* Name.Variable.Instance - bright yellow */
+.highlight .vi {
+    color: #f4d67a;
+}
+
+/* Literal.Number.Integer.Long - bright red/coral */
+.highlight .il {
+    color: #ef7e7e;
+}

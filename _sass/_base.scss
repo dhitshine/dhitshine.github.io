@@ -4,6 +4,18 @@
 
 // Typography
 
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 350;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: "JetBrains Mono", monospace;
+}
+
 p,
 h1,
 h2,
@@ -24,6 +36,7 @@ hr {
 }
 
 table {
+
   td,
   th {
     font-size: 1rem;
@@ -51,6 +64,7 @@ table.table a {
 
 .table-dark {
   background-color: transparent;
+
   &.table-bordered {
     border: 1px solid var(--global-divider-color) !important;
   }
@@ -138,10 +152,11 @@ blockquote {
 // Checklist
 
 ul.task-list {
-  list-style-type: none; /* Remove bullets from all levels */
+  list-style-type: none;
+  /* Remove bullets from all levels */
 }
 
-ul.task-list > li ul {
+ul.task-list>li ul {
   /* Nested lists within .task-list */
   padding-inline-start: 1.5rem;
 }
@@ -299,17 +314,22 @@ ul.task-list input[type="checkbox"] {
 
   .navbar-brand {
     color: var(--global-text-color);
+
+    &.title {
+      font-weight: 600;
+    }
   }
 
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
+    font-weight: 600;
 
     &:hover {
       color: var(--global-hover-color);
     }
   }
 
-  .navbar-nav .nav-item.active > .nav-link {
+  .navbar-nav .nav-item.active>.nav-link {
     background-color: inherit;
     font-weight: bolder;
     color: var(--global-theme-color);
@@ -469,7 +489,7 @@ ul.task-list input[type="checkbox"] {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.wechat-modal > img {
+.wechat-modal>img {
   display: block;
   position: relative;
   top: 50%;
@@ -480,13 +500,14 @@ ul.task-list input[type="checkbox"] {
 }
 
 @media only screen and (max-width: 400px) {
-  .wechat-modal > img {
+  .wechat-modal>img {
     width: 100%;
   }
 }
 
 // Footer
 footer.fixed-bottom {
+  border-top: 1px solid var(--global-divider-color);
   background-color: var(--global-footer-bg-color);
   font-size: 0.75rem;
 
@@ -509,12 +530,23 @@ footer.fixed-bottom {
 
 footer.sticky-bottom {
   border-top: 1px solid var(--global-divider-color);
+  background-color: var(--global-footer-bg-color);
   padding-top: 40px;
   padding-bottom: 40px;
   font-size: 0.9rem;
 
   .container {
+    color: var(--global-footer-text-color);
     text-align: center;
+  }
+
+  a {
+    color: var(--global-footer-link-color);
+
+    &:hover {
+      color: var(--global-theme-color);
+      text-decoration: none;
+    }
   }
 }
 
@@ -749,8 +781,7 @@ footer.sticky-bottom {
     li {
       margin-bottom: 1rem;
 
-      .preview {
-      }
+      .preview {}
 
       .abbr {
         margin-bottom: 0.5rem;
@@ -790,12 +821,12 @@ footer.sticky-bottom {
           }
         }
 
-        > em {
+        >em {
           border-bottom: 1px solid;
           font-style: normal;
         }
 
-        > span.more-authors {
+        >span.more-authors {
           color: var(--global-text-color-light);
           border-bottom: 1px dashed var(--global-text-color-light);
           cursor: pointer;
@@ -822,6 +853,7 @@ footer.sticky-bottom {
             border-color: var(--global-theme-color);
           }
         }
+
         a.award.btn {
           border-color: var(--global-highlight-color);
         }
@@ -829,6 +861,7 @@ footer.sticky-bottom {
 
       .badges {
         padding-bottom: 0.5rem;
+
         span {
           display: inline-block;
           color: $black-color;
@@ -859,7 +892,7 @@ footer.sticky-bottom {
         }
 
         pre {
-          font-size: 1em;
+          font-size: 1.2em;
           line-height: 1.4em;
           padding: 10px;
         }
@@ -882,39 +915,203 @@ footer.sticky-bottom {
         border-color: var(--global-text-color);
       }
     }
+
     div.award.hidden {
       border: dashed 1px var(--global-bg-color);
     }
+
     div.award.hidden.open {
       border-color: var(--global-highlight-color);
     }
   }
 }
 
-// Rouge Color Customization
+// Rouge Color Customization - Chirpy-style code blocks
 figure.highlight {
   margin: 0 0 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #f7f7f7;
+  position: relative;
+  border: 1.9px solid #d0d7de;
 
-  // Responsive code block container
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  // Code header with language label and copy button
+  .code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f3f5;
+    height: 2.25rem;
+    padding: 0 0.5rem 0 0.75rem;
+    border-bottom: 1px solid #e1e4e8;
+
+    // Three dots
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 50%;
+      background-color: #c0c5ca;
+      box-shadow:
+        1.25rem 0 0 #c0c5ca,
+        2.5rem 0 0 #c0c5ca;
+    }
+
+    .code-lang {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #a3a3a3;
+      margin-left: -2rem; // Center the label
+
+      i {
+        margin-right: 0.25rem;
+        font-size: 0.75rem;
+      }
+    }
+
+    .copy-btn {
+      background: transparent;
+      border: none;
+      padding: 0.25rem 0.5rem;
+      cursor: pointer;
+      border-radius: 4px;
+      color: #c9c8c8;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: rgba(128, 128, 128, 0.37);
+        color: #666;
+      }
+
+      &.copied {
+        color: #27c93f;
+      }
+
+      i {
+        font-size: 0.9rem;
+      }
+    }
+  }
 
   pre {
-    // Ensure code blocks can scroll horizontally
+    margin: 0;
+    padding: 0.5rem 1rem;
+    padding-bottom: 0.75rem;
+    background-color: #f7f7f7;
     white-space: pre;
     word-wrap: normal;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    font-size: 0.87rem;
+    line-height: 1.23rem;
+
+    code {
+      color: #24292e;
+      background-color: transparent;
+      padding: 0;
+    }
+  }
+
+  // Table layout for line numbers
+  table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    td {
+      padding: 0;
+      vertical-align: top;
+
+      &:first-child {
+        width: 2rem;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        border-right: 1px solid #e1e4e8;
+      }
+
+      &:last-child {
+        padding-left: 1rem;
+      }
+
+      pre {
+        overflow: visible;
+        word-break: normal;
+        padding: 0.5rem 0;
+      }
+    }
+  }
+
+  // Line numbers
+  .lineno {
+    display: block;
+    text-align: right;
+    color: #6e7781;
+    user-select: none;
+    font-size: 0.87rem;
+    line-height: 1.23rem;
+    padding: 0.5rem 1rem;
   }
 }
 
+// Dark mode code blocks
+html[data-theme="dark"] {
+  figure.highlight {
+    background-color: #141b1e;
+    border-color: #3d4548;
+
+    .code-header {
+      background-color: #232a2d;
+      border-bottom-color: #161d1f;
+
+      // Colored dots for dark mode (Everblush style)
+      &::before {
+        background-color: #e57474;
+        box-shadow:
+          1.25rem 0 0 #e5c76b,
+          2.5rem 0 0 #8ccf7e;
+      }
+
+      .code-lang {
+        color: #67b0e8;
+      }
+
+      .copy-btn {
+        color: #404749;
+
+        &:hover {
+          color: #dadada;
+        }
+      }
+    }
+
+    table {
+      td:first-child {
+        border-right-color: #161d1f;
+      }
+    }
+
+    pre {
+      background-color: #141b1e;
+
+      code {
+        color: #dadada;
+      }
+    }
+
+    .lineno {
+      color: #5b6567;
+    }
+  }
+}
+
+
+// Inline pre
 pre {
   color: var(--global-theme-color);
   background-color: var(--global-code-bg-color);
   border-radius: 6px;
   padding: 6px 12px;
-
-  // Responsive behavior for code blocks
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   white-space: pre;
@@ -934,9 +1131,7 @@ code {
   color: var(--global-theme-color);
   background-color: var(--global-code-bg-color);
   border-radius: 3px;
-  padding: 3px 3px;
-
-  // Inline code should wrap
+  padding: 2px;
   white-space: normal;
   word-wrap: break-word;
 }
@@ -1030,30 +1225,7 @@ progress::-moz-progress-bar {
   height: inherit;
 }
 
-/* Copy button */
-.code-display-wrapper {
-  position: relative;
 
-  .copy {
-    background: var(--global-card-bg-color);
-    border-color: var(--global-bg-color);
-    border-radius: 0.3rem;
-    border-style: none;
-    color: var(--global-text-color);
-    font-size: medium;
-    opacity: 0;
-    position: absolute;
-    right: 0.2rem;
-    top: 0.2rem;
-  }
-
-  &:active .copy,
-  &:focus .copy,
-  &:hover .copy {
-    color: var(--global-hover-color);
-    opacity: 1;
-  }
-}
 
 .btn-group.dropdown {
   .btn {
@@ -1084,11 +1256,11 @@ progress::-moz-progress-bar {
 nav[data-toggle="toc"] {
   top: 5rem;
 
-  .nav .nav > li > a {
+  .nav .nav>li>a {
     font-size: 0.75rem;
   }
 
-  .nav > li > a {
+  .nav>li>a {
     color: var(--global-text-color);
     font-size: 0.75rem;
 
@@ -1112,6 +1284,7 @@ nav[data-toggle="toc"] {
 
 /* small screens */
 @media (max-width: 576px) {
+
   /* override stickyness so that the navigation does not follow scrolling */
   nav[data-toggle="toc"] {
     visibility: hidden;
@@ -1240,7 +1413,7 @@ swiper-container {
     border-bottom: 2px solid var(--global-text-color);
   }
 
-  .ps-algorithm.with-caption > .ps-line:first-child {
+  .ps-algorithm.with-caption>.ps-line:first-child {
     border-bottom: 2px solid var(--global-text-color);
   }
 }
@@ -1362,6 +1535,7 @@ ninja-keys::part(ninja-input-wrapper) {
 }
 
 @media (max-width: 575px) {
+
   .newsletter-form-input,
   .newsletter-form-button,
   .newsletter-loading-button,
@@ -1369,6 +1543,7 @@ ninja-keys::part(ninja-input-wrapper) {
   .newsletter-error {
     font-size: 16px !important;
   }
+
   .newsletter-form-container {
     margin-right: 20px;
     margin-left: 20px;
@@ -1391,6 +1566,7 @@ ninja-keys::part(ninja-input-wrapper) {
 }
 
 .bs-popover-top {
+
   // arrow fill color
   .arrow::after {
     border-top-color: var(--global-bg-color);
@@ -1403,6 +1579,7 @@ ninja-keys::part(ninja-input-wrapper) {
 }
 
 .bs-popover-bottom {
+
   // arrow fill color
   .arrow::after {
     border-bottom-color: var(--global-bg-color);
@@ -1423,7 +1600,8 @@ ninja-keys::part(ninja-input-wrapper) {
 figure.cover {
   display: inline-block;
   text-align: center;
-  margin: 0.5rem; /* adjust as needed */
+  margin: 0.5rem;
+  /* adjust as needed */
 
   img {
     vertical-align: bottom;
