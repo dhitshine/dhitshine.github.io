@@ -22,14 +22,14 @@ This website serves as my personal space on the web where I share my thoughts, w
 
 Inside this project, you will find:
 
-- public: Static assets including the favicon and default OG image.
-- src/assets: Icons and local images.
-- src/components: Reusable Astro components.
-- src/content/pages: Static pages (e.g., About page).
-- src/content/posts: Blog posts in Markdown format.
-- src/layouts: Layout components.
-- src/pages: Routing pages and endpoints.
-- src/styles: Global and custom CSS stylesheets.
+- `public`: Static assets including the favicon and default OG image.
+- `src/assets`: Icons and local images.
+- `src/components`: Reusable Astro components.
+- `src/content/pages`: Static pages (e.g., About page).
+- `src/content/posts`: Blog posts in Markdown format.
+- `src/layouts`: Layout components.
+- `src/pages`: Routing pages and endpoints.
+- `src/styles`: Global and custom CSS stylesheets.
 
 ## Running Locally
 
@@ -51,7 +51,7 @@ npm run preview
 
 ## Deployment
 
-The website is configured to deploy automatically to GitHub Pages using GitHub Actions when changes are pushed to the main branch. The workflow is configured in .github/workflows/deploy.yml.
+The website is configured to deploy automatically to GitHub Pages using GitHub Actions when changes are pushed to the main branch. The workflow is configured in `.github/workflows/deploy.yml`.
 
 ## License
 
