@@ -32,6 +32,7 @@ export default {
     featured: "Featured",
     recentPosts: "Recent Posts",
     allPosts: "All Posts",
+    noPosts: "No posts yet.",
   },
   footer: {
     copyright: "Copyright",

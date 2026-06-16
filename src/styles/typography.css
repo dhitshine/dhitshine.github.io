@@ -108,7 +108,7 @@
   }
 
   .katex-display {
-    @apply overflow-x-auto overflow-y-hidden py-4 text-foreground text-xl! sm:text-2xl!;
+    @apply overflow-x-auto overflow-y-hidden py-4 text-foreground text-lg! sm:text-xl!;
   }
 
   /* ===== Code Blocks & Syntax Highlighting ===== */
